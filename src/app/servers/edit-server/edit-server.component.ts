@@ -12,7 +12,7 @@ export class EditServerComponent implements OnInit {
   serverStatus:string;
   
   onUpdateServer(){
-    this.serversService.updateServer(this.server.id,{name:this.server.name,status:this.server.status})
+    this.serversService.updateServer(this.server.id,{name:this.serverName,status:this.serverStatus})
   }
 
   constructor(private serversService:ServersService) { 
