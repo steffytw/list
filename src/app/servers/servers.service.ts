@@ -22,6 +22,9 @@ export class ServersService {
       server.status=serverInfo.status;
     }
   }
+  getServers(){
+    return this.servers;
+  }
 
   constructor() { }
 }
