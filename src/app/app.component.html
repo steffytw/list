@@ -1,32 +1,24 @@
 <div class="container">
+    <div [style.backgroundImage]="getBackgroundImageUrl()"></div>
     <div class="row">
         <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
           <ul class="nav nav-tabs">
-            <li role="presentation" class="active">
-              <a href="#">Home</a>
+            <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+              <a routerLink="">Home</a>
             </li>
-            <li role="presentation">
-                <a href="#">Server</a>
+            <li role="presentation" routerLinkActive="active">
+                <a [routerLink]="['servers']">Server</a>
               </li>
-              <li role="presentation">
-                  <a href="#">User</a>
+              <li role="presentation" routerLinkActive="active">
+                  <a [routerLink]="['users']">User</a>
                 </li>
           </ul>
           </div>
       </div>
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-      <home></home>
+      <router-outlet></router-outlet>
       </div>
   </div>
-  <div class="row">
-      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-        <users></users>
-        </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-        <servers></servers>
-        </div>
-    </div>
+  
 </div>

@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-new-app';
+  getBackgroundImageUrl() {
+    return `url(${this.myBackgroundImageUrl})`
+  }
+  myBackgroundImageUrl = 'https://www.fillmurray.com/200/300'
+ 
+
 }

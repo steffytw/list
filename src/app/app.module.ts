@@ -9,7 +9,7 @@ import { UserComponent } from './users/user/user.component';
 import { ServersComponent } from './servers/servers.component';
 import { EditServerComponent } from './servers/edit-server/edit-server.component';
 import { ServerComponent } from './servers/server/server.component';
-import { Routes } from '@angular/router'
+import { Routes, RouterModule } from '@angular/router'
 
 const appRoutes:Routes=[{path:'',component:HomeComponent},
   {path:'users',component:UsersComponent},
@@ -27,7 +27,8 @@ const appRoutes:Routes=[{path:'',component:HomeComponent},
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
